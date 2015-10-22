@@ -36,18 +36,27 @@ PODS:
     - BlocksKit/Core
     - BlocksKit/DynamicDelegate
   - IQKeyboardManager (3.3.1)
+  - Masonry (0.6.2)
   - MBProgressHUD (0.9.1)
+  - MJRefresh (2.4.9)
+  - QBImagePickerController (2.5.2)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6.0)
   - BlocksKit (~> 2.2.5)
   - IQKeyboardManager (~> 3.3.1)
+  - Masonry (~> 0.6.2)
   - MBProgressHUD (~> 0.9.1)
+  - MJRefresh (~> 2.4.9)
+  - QBImagePickerController (<= 2.5.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
   BlocksKit: 7f422b971407001178d181a43b99014ea2591fe6
   IQKeyboardManager: 860a5b9df32cc1435a3e967a08ed87de3e59c12e
+  Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
   MBProgressHUD: c47f2c166c126cf2ce36498d80f33e754d4e93ad
+  MJRefresh: be84acb912d0a66364f76a75426698a39528e2ed
+  QBImagePickerController: 96c2e340edb7fcac5acf21b72314fac9201ffb8e
 
 COCOAPODS: 0.38.2
