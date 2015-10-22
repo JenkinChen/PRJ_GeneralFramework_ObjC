@@ -17,6 +17,12 @@ typedef void(^LocationFailure)(NSError *error);
 
 @property (nonatomic, strong, readonly) CLLocationManager *locationManager;
 
+/**
+ *  定位
+ *
+ *  @param locationSuccess 定位成功回到
+ *  @param locationFailure 定位失败回调
+ */
 - (void)locationSueeces:(LocationSuccess)locationSuccess failure:(LocationFailure)locationFailure;
 
 @end

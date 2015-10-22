@@ -9,9 +9,9 @@
 #import "BaseViewCtrl.h"
 
 typedef NS_ENUM(NSInteger, TakePhotoModel) {
-    TakePhotoModelCamera,
-    TakePhotoModelPhotoLibrarySingle,
-    TakePhotoModelPhotoLibraryMulti,
+    TakePhotoModelCamera,               /**< 从照相机 */
+    TakePhotoModelPhotoLibrarySingle,   /**< 取一张 */
+    TakePhotoModelPhotoLibraryMulti,    /**< 取多张 */
 };
 
 typedef void (^TakePhotoCompleteBlock) (NSArray<UIImage *> *);
@@ -20,6 +20,15 @@ typedef void (^TakePhotoCompleteBlock) (NSArray<UIImage *> *);
 
 @property (nonatomic, copy, readonly) TakePhotoCompleteBlock takePhotoCompleteBlock;
 
+
+/**
+ *  取照片
+ *
+ *  @param title                  标题
+ *  @param takePhotoModel         取照片（ 想“与或”取法，暂还没时间，只能用数组）
+ *  @param maxPhoto               当取多张图片的时候，最大图片数量
+ *  @param takePhotoCompleteBlock 取照片回调
+ */
 - (void)presentPhotoActionSheetWithTitle:(NSString *)title takePhotoModel:(NSArray *)takePhotoModel maxPhotos:(NSUInteger)maxPhoto completeBlock:(TakePhotoCompleteBlock)takePhotoCompleteBlock;
 
 @end
