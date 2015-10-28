@@ -7,9 +7,10 @@
 //
 
 #import "BaseViewCtrl+Network.h"
+#import "HttpRequest.h"
 
 
-@interface BaseViewCtrl () 
+@interface BaseViewCtrl ()  <HttpRequestDelegate>
 
 @end
 
@@ -62,6 +63,9 @@
 
 - (void)showMBProgressHUDIndeterminate
 {
+    if (_progressHUD) {
+        [self hideMBProgressHUD];
+    }
     _progressHUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 }
 

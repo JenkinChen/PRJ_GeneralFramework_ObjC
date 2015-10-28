@@ -8,6 +8,7 @@
 
 #import "HttpRequest.h"
 #import <AFNetworking/AFNetworking.h>
+#import "PublicMacro.h"
 
 #define PrintLog YES
 
@@ -16,7 +17,7 @@
     NSString *_URLString;
     id _parameters;
     NSInteger _requestCode;
-    BaseViewCtrl<HttpRequestDelegate> *_viewController;
+    id<HttpRequestDelegate> _viewController;
     id _object;
     
     AFHTTPRequestOperationManager *_manager;
@@ -37,7 +38,7 @@
     return self;
 }
 
-- (instancetype)initUrl:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode delegate:(BaseViewCtrl<HttpRequestDelegate> *)viewController object:(id)object
+- (instancetype)initUrl:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode delegate:(id<HttpRequestDelegate>)viewController object:(id)object
 {
     self = [self init];
     if (self) {
@@ -104,13 +105,13 @@
 }
  */
 
-+ (void)POST:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode delegate:(BaseViewCtrl<HttpRequestDelegate> *)viewController
++ (void)POST:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode delegate:(id<HttpRequestDelegate>)viewController
 {
     HttpRequest *request = [[[self class] alloc] initUrl:URLString parameters:parameters requestCode:requestCode delegate:viewController object:nil];
     [request POST];
 }
 
-+ (void)POST:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode delegate:(BaseViewCtrl<HttpRequestDelegate> *)viewController object:(id)object
++ (void)POST:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode delegate:(id<HttpRequestDelegate>)viewController object:(id)object
 {
     HttpRequest *request = [[[self class] alloc] initUrl:URLString parameters:parameters requestCode:requestCode delegate:viewController object:object];
     [request POST];

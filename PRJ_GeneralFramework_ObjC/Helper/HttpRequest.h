@@ -8,11 +8,10 @@
 
 #import <Foundation/Foundation.h>
 #import "HttpRequestDelegate.h"
-#import "BaseViewCtrl.h"
 
 @interface HttpRequest : NSObject
 
-- (instancetype)initUrl:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode delegate:(BaseViewCtrl<HttpRequestDelegate> *)viewController object:(id)object;
+- (instancetype)initUrl:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode delegate:(id<HttpRequestDelegate>)viewController object:(id)object;
 
 - (void)POST;
 
@@ -25,8 +24,8 @@
 *  @param viewController 请求对象
 *  @param object         请求传递参数
 */
-+ (void)POST:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode delegate:(BaseViewCtrl<HttpRequestDelegate> *)viewController object:(id)object;
++ (void)POST:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode delegate:(id<HttpRequestDelegate>)viewController object:(id)object;
 
-+ (void)POST:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode delegate:(BaseViewCtrl<HttpRequestDelegate> *)viewController;
++ (void)POST:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode delegate:(id<HttpRequestDelegate>)viewController;
 
 @end

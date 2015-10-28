@@ -73,6 +73,7 @@
 		02256D391BD67B3500C473B7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02256D5D1BD67D3000C473B7 /* BaseViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewCtrl.h; sourceTree = "<group>"; };
 		02256D5E1BD67D3000C473B7 /* BaseViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewCtrl.m; sourceTree = "<group>"; };
+		02624BE51BE1232400FFC766 /* BaseViewCtrlNetworkDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewCtrlNetworkDelegate.h; sourceTree = "<group>"; };
 		2A1537C9FEA3926E1FE6C649 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD043D501BE05A1100796312 /* OneNextViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneNextViewCtrl.h; sourceTree = "<group>"; };
 		DD043D511BE05A1100796312 /* OneNextViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneNextViewCtrl.m; sourceTree = "<group>"; };
@@ -304,6 +305,7 @@
 				DD2881771BD8FF6D009FCC28 /* BaseViewCtrl+Photo.m */,
 				DD2881781BD8FF6D009FCC28 /* BaseViewCtrl+Location.h */,
 				DD2881791BD8FF6D009FCC28 /* BaseViewCtrl+Location.m */,
+				02624BE51BE1232400FFC766 /* BaseViewCtrlNetworkDelegate.h */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -320,10 +322,10 @@
 		DD043D4F1BE05A1100796312 /* One */ = {
 			isa = PBXGroup;
 			children = (
-				DD043D501BE05A1100796312 /* OneNextViewCtrl.h */,
-				DD043D511BE05A1100796312 /* OneNextViewCtrl.m */,
 				DD043D521BE05A1100796312 /* OneViewCtrl.h */,
 				DD043D531BE05A1100796312 /* OneViewCtrl.m */,
+				DD043D501BE05A1100796312 /* OneNextViewCtrl.h */,
+				DD043D511BE05A1100796312 /* OneNextViewCtrl.m */,
 			);
 			path = One;
 			sourceTree = "<group>";

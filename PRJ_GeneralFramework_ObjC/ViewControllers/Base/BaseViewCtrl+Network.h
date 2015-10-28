@@ -7,10 +7,10 @@
 //
 
 #import "BaseViewCtrl.h"
-#import "HttpRequest.h"
+#import "BaseViewCtrlNetworkDelegate.h"
 
 /** 网络,需要再修改 */
-@interface BaseViewCtrl (Network) <HttpRequestDelegate>
+@interface BaseViewCtrl (Network) 
 
 - (void)POST:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode object:(id)object;
 

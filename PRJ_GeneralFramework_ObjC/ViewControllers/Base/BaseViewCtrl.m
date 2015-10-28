@@ -16,8 +16,7 @@
 @implementation BaseViewCtrl
 
 #pragma mark - Life Cycle
-- (void)dealloc
-{
+- (void)dealloc{
     NSLog(@"%s", __func__);
 }
 
@@ -154,8 +153,7 @@
 
 - (void)showMBProgressHUDCorrect:(NSString *)message completionBlock:(void(^)(void))completionBlock;
 {
-    _progressHUD = [[MBProgressHUD alloc] initWithView:self.view];
-    _progressHUD.mode = MBProgressHUDModeCustomView;
+    [self showMBProgressHUDWith:MBProgressHUDModeCustomView];
     _progressHUD.customView = [[UIImageView alloc] initWithImage:UIImageName(@"公共-成功-图标")];
     _progressHUD.labelText = message;
     
@@ -172,8 +170,7 @@
 
 - (void)showMBProgressHUDError:(NSString *)message;
 {
-    _progressHUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    _progressHUD.mode = MBProgressHUDModeCustomView;
+    [self showMBProgressHUDWith:MBProgressHUDModeCustomView];
     _progressHUD.customView = [[UIImageView alloc] initWithImage:UIImageName(@"公共-失败-图标")];
     _progressHUD.labelText = message;
     
@@ -182,11 +179,19 @@
 
 - (void)showMBProgressHUDText:(NSString *)message
 {
-    _progressHUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-    _progressHUD.mode = MBProgressHUDModeText;
+    [self showMBProgressHUDWith:MBProgressHUDModeText];
     _progressHUD.detailsLabelText = message;
     
     [self hideMBProgressHUDAfterDelay:1];
+}
+
+- (void)showMBProgressHUDWith:(MBProgressHUDMode)mode
+{
+    if (_progressHUD) {
+        [self hideMBProgressHUD];
+    }
+    _progressHUD = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    _progressHUD.mode = mode;
 }
 
 - (void)hideMBProgressHUD;
