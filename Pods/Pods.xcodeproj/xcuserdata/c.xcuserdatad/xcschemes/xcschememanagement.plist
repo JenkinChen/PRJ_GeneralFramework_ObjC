@@ -9,7 +9,47 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>BlocksKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>IQKeyboardManager.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MBProgressHUD.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>MJRefresh.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Masonry.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Pods.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>QBImagePickerController-QBImagePicker.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>QBImagePickerController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>SDWebImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -17,22 +57,17 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>057EE4715772885FCCE7BD77DE633BBB</key>
+		<key>008B3720C3420C720ABEC4C66AA96037</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>09F1BA9329FD8C439A0ACD9FBF95AC48</key>
+		<key>0242E9512D346C34F8FEA03C72880820</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2671161D4AC868745DD3DCDB35D6FC12</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>4D7872153AE06F0C2770D48E41F01EF1</key>
+		<key>1E85934EA784E79FFCCF736F645A5148</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -42,22 +77,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>65F88BB5C5FB73CF71CE2164D814676A</key>
+		<key>5DCEF7B98B6F167589F33407A8E6364A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>836F4DA2248DE97A1830801438F70308</key>
+		<key>CA495C7BD54665BA8713A2E1E951519E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C34C0282740DB4D5DAAA9B1D89A8397D</key>
+		<key>CB19BBFFACB98F4F2D117F0A2FE44391</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E0A0843C35E4406010926441E5E9C150</key>
+		<key>CBF696BC7F5EF2F2690FE5ED0073D3DF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>F39A061E86A746E4EFC55FB08B24211E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>FD34DAD84D56813CBDE24EBC4E7D5B70</key>
 		<dict>
 			<key>primary</key>
 			<true/>
