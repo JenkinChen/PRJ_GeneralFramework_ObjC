@@ -18,8 +18,8 @@
 		02256D381BD67B3500C473B7 /* PRJ_GeneralFramework_ObjCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02256D371BD67B3500C473B7 /* PRJ_GeneralFramework_ObjCUITests.m */; };
 		02256D5F1BD67D3000C473B7 /* BaseViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 02256D5E1BD67D3000C473B7 /* BaseViewCtrl.m */; settings = {ASSET_TAGS = (); }; };
 		64C7930C60E887C190484466 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1537C9FEA3926E1FE6C649 /* libPods.a */; };
-		DD043D461BE0569100796312 /* OneNextViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = DD043D431BE0569100796312 /* OneNextViewCtrl.m */; settings = {ASSET_TAGS = (); }; };
-		DD043D471BE0569100796312 /* OneViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = DD043D451BE0569100796312 /* OneViewCtrl.m */; settings = {ASSET_TAGS = (); }; };
+		DD043D541BE05A1100796312 /* OneNextViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = DD043D511BE05A1100796312 /* OneNextViewCtrl.m */; settings = {ASSET_TAGS = (); }; };
+		DD043D551BE05A1100796312 /* OneViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = DD043D531BE05A1100796312 /* OneViewCtrl.m */; settings = {ASSET_TAGS = (); }; };
 		DD06AA931BD904DC00EF14F1 /* BaseViewCtrl+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = DD06AA921BD904DC00EF14F1 /* BaseViewCtrl+Network.m */; settings = {ASSET_TAGS = (); }; };
 		DD06AA951BD907A400EF14F1 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD06AA941BD907A400EF14F1 /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DD06AAC21BD90A6C00EF14F1 /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DD06AABB1BD90A6C00EF14F1 /* UIViewController+Category.m */; settings = {ASSET_TAGS = (); }; };
@@ -74,10 +74,10 @@
 		02256D5D1BD67D3000C473B7 /* BaseViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewCtrl.h; sourceTree = "<group>"; };
 		02256D5E1BD67D3000C473B7 /* BaseViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewCtrl.m; sourceTree = "<group>"; };
 		2A1537C9FEA3926E1FE6C649 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD043D421BE0569100796312 /* OneNextViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneNextViewCtrl.h; sourceTree = "<group>"; };
-		DD043D431BE0569100796312 /* OneNextViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneNextViewCtrl.m; sourceTree = "<group>"; };
-		DD043D441BE0569100796312 /* OneViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewCtrl.h; sourceTree = "<group>"; };
-		DD043D451BE0569100796312 /* OneViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewCtrl.m; sourceTree = "<group>"; };
+		DD043D501BE05A1100796312 /* OneNextViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneNextViewCtrl.h; sourceTree = "<group>"; };
+		DD043D511BE05A1100796312 /* OneNextViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneNextViewCtrl.m; sourceTree = "<group>"; };
+		DD043D521BE05A1100796312 /* OneViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewCtrl.h; sourceTree = "<group>"; };
+		DD043D531BE05A1100796312 /* OneViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewCtrl.m; sourceTree = "<group>"; };
 		DD06AA911BD904DC00EF14F1 /* BaseViewCtrl+Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseViewCtrl+Network.h"; sourceTree = "<group>"; };
 		DD06AA921BD904DC00EF14F1 /* BaseViewCtrl+Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseViewCtrl+Network.m"; sourceTree = "<group>"; };
 		DD06AA941BD907A400EF14F1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
@@ -252,7 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				02256D5C1BD67D0F00C473B7 /* Base */,
-				DD06AA8E1BD9022300EF14F1 /* One */,
+				DD043D4F1BE05A1100796312 /* One */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -317,16 +317,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		DD06AA8E1BD9022300EF14F1 /* One */ = {
+		DD043D4F1BE05A1100796312 /* One */ = {
 			isa = PBXGroup;
 			children = (
-				DD043D421BE0569100796312 /* OneNextViewCtrl.h */,
-				DD043D431BE0569100796312 /* OneNextViewCtrl.m */,
-				DD043D441BE0569100796312 /* OneViewCtrl.h */,
-				DD043D451BE0569100796312 /* OneViewCtrl.m */,
+				DD043D501BE05A1100796312 /* OneNextViewCtrl.h */,
+				DD043D511BE05A1100796312 /* OneNextViewCtrl.m */,
+				DD043D521BE05A1100796312 /* OneViewCtrl.h */,
+				DD043D531BE05A1100796312 /* OneViewCtrl.m */,
 			);
-			name = One;
-			path = ../../../PRJ_GeneralFramework/PRJ_GeneralFramework/ViewControllers/One;
+			path = One;
 			sourceTree = "<group>";
 		};
 		EB738CC1D0B1C10C264A534A /* Pods */ = {
@@ -515,12 +514,12 @@
 				DD2881741BD8FED9009FCC28 /* HttpRequest.m in Sources */,
 				02256D141BD67B3500C473B7 /* AppDelegate.m in Sources */,
 				02256D5F1BD67D3000C473B7 /* BaseViewCtrl.m in Sources */,
-				DD043D471BE0569100796312 /* OneViewCtrl.m in Sources */,
+				DD043D551BE05A1100796312 /* OneViewCtrl.m in Sources */,
 				DD28817A1BD8FF6D009FCC28 /* BaseViewCtrl+Photo.m in Sources */,
 				DD06AA931BD904DC00EF14F1 /* BaseViewCtrl+Network.m in Sources */,
 				02256D1D1BD67B3500C473B7 /* PRJ_GeneralFramework_ObjC.xcdatamodeld in Sources */,
 				02256D111BD67B3500C473B7 /* main.m in Sources */,
-				DD043D461BE0569100796312 /* OneNextViewCtrl.m in Sources */,
+				DD043D541BE05A1100796312 /* OneNextViewCtrl.m in Sources */,
 				DD06AAC31BD90A6C00EF14F1 /* NSString+Category.m in Sources */,
 				DD2881831BD900A9009FCC28 /* CustomNavCtrl.m in Sources */,
 			);
