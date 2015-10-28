@@ -10,4 +10,9 @@
 
 @protocol BaseViewCtrlNetworkDelegate <NSObject>
 
+@optional
+- (void)requestSuccess:(NSInteger)requestCode result:(id)responseObject object:(id)object;
+
+- (void)requestFailure:(NSInteger)requestCode error:(NSError *)error;
+
 @end

@@ -20,7 +20,6 @@
 		64C7930C60E887C190484466 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1537C9FEA3926E1FE6C649 /* libPods.a */; };
 		DD043D541BE05A1100796312 /* OneNextViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = DD043D511BE05A1100796312 /* OneNextViewCtrl.m */; settings = {ASSET_TAGS = (); }; };
 		DD043D551BE05A1100796312 /* OneViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = DD043D531BE05A1100796312 /* OneViewCtrl.m */; settings = {ASSET_TAGS = (); }; };
-		DD06AA931BD904DC00EF14F1 /* BaseViewCtrl+Network.m in Sources */ = {isa = PBXBuildFile; fileRef = DD06AA921BD904DC00EF14F1 /* BaseViewCtrl+Network.m */; settings = {ASSET_TAGS = (); }; };
 		DD06AA951BD907A400EF14F1 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD06AA941BD907A400EF14F1 /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		DD06AAC21BD90A6C00EF14F1 /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DD06AABB1BD90A6C00EF14F1 /* UIViewController+Category.m */; settings = {ASSET_TAGS = (); }; };
 		DD06AAC31BD90A6C00EF14F1 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DD06AABD1BD90A6C00EF14F1 /* NSString+Category.m */; settings = {ASSET_TAGS = (); }; };
@@ -79,8 +78,6 @@
 		DD043D511BE05A1100796312 /* OneNextViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneNextViewCtrl.m; sourceTree = "<group>"; };
 		DD043D521BE05A1100796312 /* OneViewCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OneViewCtrl.h; sourceTree = "<group>"; };
 		DD043D531BE05A1100796312 /* OneViewCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OneViewCtrl.m; sourceTree = "<group>"; };
-		DD06AA911BD904DC00EF14F1 /* BaseViewCtrl+Network.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BaseViewCtrl+Network.h"; sourceTree = "<group>"; };
-		DD06AA921BD904DC00EF14F1 /* BaseViewCtrl+Network.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BaseViewCtrl+Network.m"; sourceTree = "<group>"; };
 		DD06AA941BD907A400EF14F1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		DD06AABA1BD90A6C00EF14F1 /* UIViewController+Category.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+Category.h"; sourceTree = "<group>"; };
 		DD06AABB1BD90A6C00EF14F1 /* UIViewController+Category.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+Category.m"; sourceTree = "<group>"; };
@@ -299,8 +296,6 @@
 				DD2881821BD900A9009FCC28 /* CustomNavCtrl.m */,
 				02256D5D1BD67D3000C473B7 /* BaseViewCtrl.h */,
 				02256D5E1BD67D3000C473B7 /* BaseViewCtrl.m */,
-				DD06AA911BD904DC00EF14F1 /* BaseViewCtrl+Network.h */,
-				DD06AA921BD904DC00EF14F1 /* BaseViewCtrl+Network.m */,
 				DD2881761BD8FF6D009FCC28 /* BaseViewCtrl+Photo.h */,
 				DD2881771BD8FF6D009FCC28 /* BaseViewCtrl+Photo.m */,
 				DD2881781BD8FF6D009FCC28 /* BaseViewCtrl+Location.h */,
@@ -518,7 +513,6 @@
 				02256D5F1BD67D3000C473B7 /* BaseViewCtrl.m in Sources */,
 				DD043D551BE05A1100796312 /* OneViewCtrl.m in Sources */,
 				DD28817A1BD8FF6D009FCC28 /* BaseViewCtrl+Photo.m in Sources */,
-				DD06AA931BD904DC00EF14F1 /* BaseViewCtrl+Network.m in Sources */,
 				02256D1D1BD67B3500C473B7 /* PRJ_GeneralFramework_ObjC.xcdatamodeld in Sources */,
 				02256D111BD67B3500C473B7 /* main.m in Sources */,
 				DD043D541BE05A1100796312 /* OneNextViewCtrl.m in Sources */,

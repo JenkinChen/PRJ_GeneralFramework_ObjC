@@ -7,7 +7,6 @@
 //
 
 #import "OneNextViewCtrl.h"
-#import "BaseViewCtrl+Network.h"
 
 @interface OneNextViewCtrl ()
 
@@ -25,6 +24,11 @@
 {
     [self POST:@"&c=Index&a=goods_type" parameters:nil requestCode:123];
     [self POST:@"&c=Index&a=goods_type" parameters:nil requestCode:456];
+}
+
+- (void)requestFailure:(NSInteger)requestCode error:(NSError *)error
+{
+    NSLog(@"=========%ld", requestCode);
 }
 
 - (void)httpRequestSuccess:(NSInteger)requestCode result:(id)responseObject

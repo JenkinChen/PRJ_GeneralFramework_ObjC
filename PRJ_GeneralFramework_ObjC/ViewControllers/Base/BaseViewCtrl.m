@@ -7,9 +7,9 @@
 //
 
 #import "BaseViewCtrl.h"
-#import "BaseViewCtrl+Network.h"
+#import "HttpRequest.h"
 
-@interface BaseViewCtrl ()
+@interface BaseViewCtrl () <HttpRequestDelegate>
 
 @end
 
@@ -105,6 +105,49 @@
     return YES;
 }
 
+#pragma mark - NetWork
+- (void)POST:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode object:(id)object
+{
+    [self showMBProgressHUDIndeterminate];
+    [HttpRequest POST:URLString parameters:parameters requestCode:requestCode delegate:self object:object];
+}
+
+- (void)POST:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode
+{
+    [self showMBProgressHUDIndeterminate];
+    [HttpRequest POST:URLString parameters:parameters requestCode:requestCode delegate:self];
+}
+
+#pragma mark - HttpRequestDelegate
+- (void)httpRequestSuccess:(NSInteger)requestCode result:(id)responseObject object:(id)object
+{
+    [self hideMBProgressHUD];
+    [self endRefreshing];
+    
+    if ([self respondsToSelector:@selector(requestSuccess:result:object:)]) {
+        [self requestSuccess:requestCode result:responseObject object:object];
+    }
+}
+
+- (void)httpRequestSuccess:(NSInteger)requestCode result:(id)responseObject
+{
+    [self hideMBProgressHUD];
+    [self endRefreshing];
+    if ([self respondsToSelector:@selector(requestSuccess:result:object:)]) {
+        [self requestSuccess:requestCode result:responseObject object:nil];
+    }
+}
+
+- (void)httpRequestFailure:(NSInteger)requestCode error:(NSError *)error
+{
+    [self hideMBProgressHUD];
+    [self endRefreshing];
+    [self showMBProgressHUDError:@"网络异常"];
+    if ([self respondsToSelector:@selector(requestFailure:error:)]) {
+        [self requestFailure:requestCode error:error];
+    }
+}
+
 #pragma mark - Public
 - (void)popBack
 {
@@ -149,6 +192,12 @@
         _dataSource = [NSMutableArray array];
     }
     return _dataSource;
+}
+
+#pragma mark - MBProgressHUD
+- (void)showMBProgressHUDIndeterminate
+{
+    [self showMBProgressHUDWith:MBProgressHUDModeIndeterminate];
 }
 
 - (void)showMBProgressHUDCorrect:(NSString *)message completionBlock:(void(^)(void))completionBlock;

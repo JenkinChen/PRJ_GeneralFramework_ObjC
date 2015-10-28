@@ -10,6 +10,7 @@
 #import "PublicMacro.h"
 #import <MBProgressHUD/MBProgressHUD.h>
 #import <MJRefresh/MJRefresh.h>
+#import "BaseViewCtrlNetworkDelegate.h"
 
 static NSString *const RJCellIdentifier = @"CellIdentifier";        /**< Cell复用标识符 */
 
@@ -17,7 +18,7 @@ static NSString *const RJHeaderIdentifier = @"HeaderIdentifier";     /**< 头部
 
 static NSString *const RJFooterIdentifier = @"FooterIdentifier";    /**< 尾部复用标识符 */
 
-@interface BaseViewCtrl : UIViewController <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate>
+@interface BaseViewCtrl : UIViewController <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate, BaseViewCtrlNetworkDelegate>
 {
     NSInteger _pageIndex;
     
@@ -71,6 +72,10 @@ static NSString *const RJFooterIdentifier = @"FooterIdentifier";    /**< 尾部�
  *  @param control UITableView或UICollectionView
  */
 - (void)endRefreshingWith:(id)control;
+
+- (void)POST:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode object:(id)object;
+
+- (void)POST:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode;
 
 /**
  *  导航栏返回
