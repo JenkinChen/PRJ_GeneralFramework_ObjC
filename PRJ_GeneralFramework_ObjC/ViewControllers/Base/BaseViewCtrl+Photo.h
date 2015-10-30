@@ -9,17 +9,16 @@
 #import "BaseViewCtrl.h"
 
 typedef NS_OPTIONS(NSInteger, TakePhotoMode) {
-    TakePhotoModeCamera             = 1<<0,   /**< 从照相机 */
-    TakePhotoModePhotoLibrarySingle = 0<<16,/**< 取一张 */
-    TakePhotoModePhotoLibraryMulti  = 1<<16,/**< 取多张 */
+    TakePhotoModeCamera             = 1 <<  0,     /**< 从照相机 */
+    TakePhotoModePhotoLibrarySingle = 0 <<  16,    /**< 取一张 */
+    TakePhotoModePhotoLibraryMulti  = 1 <<  16,    /**< 取多张 */
 };
 
-typedef void (^TakePhotoCompleteBlock) (NSArray<UIImage *> *);
+typedef void (^TakePhotoCompleteBlock) (NSArray<UIImage *> *images);
 
 @interface BaseViewCtrl (Photo)
 
 @property (nonatomic, copy, readonly) TakePhotoCompleteBlock takePhotoCompleteBlock;
-
 
 /**
  *  取照片
@@ -29,8 +28,6 @@ typedef void (^TakePhotoCompleteBlock) (NSArray<UIImage *> *);
  *  @param maxPhoto               当取多张图片的时候，最大图片数量
  *  @param takePhotoCompleteBlock 取照片回调
  */
-//- (void)presentPhotoActionSheetWithTitle:(NSString *)title takePhotoModel:(NSArray *)takePhotoMode maxPhotos:(NSUInteger)maxPhoto completeBlock:(TakePhotoCompleteBlock)takePhotoCompleteBlock;
-
 - (void)presentPhotoActionSheetWithTitle:(NSString *)title takePhotoModel:(TakePhotoMode)takePhotoMode maxPhotos:(NSUInteger)maxPhoto completeBlock:(TakePhotoCompleteBlock)takePhotoCompleteBlock;
 
 @end
