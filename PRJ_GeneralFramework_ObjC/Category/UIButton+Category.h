@@ -11,6 +11,8 @@
 @interface UIButton (Category)
 
 /** 计时器 */
-- (dispatch_source_t)gcd_CountDown;
+- (dispatch_source_t)gcd_countDown;
+
+- (void)gcd_invalid:(dispatch_source_t)timer;
 
 @end

@@ -12,6 +12,8 @@
 
 @interface BaseViewCtrl () <UIActionSheetDelegate, UINavigationControllerDelegate,UIImagePickerControllerDelegate, QBImagePickerControllerDelegate>
 
+@property (nonatomic, copy) TakePhotoCompleteBlock takePhotoCompleteBlock;
+
 @end
 
 @implementation BaseViewCtrl (Photo)

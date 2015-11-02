@@ -21,7 +21,7 @@
     }
 }
 
-- (dispatch_source_t)gcd_CountDown
+- (dispatch_source_t)gcd_countDown
 {
     __block int timeout = 60;
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
@@ -50,6 +50,15 @@
     dispatch_resume(timer);
     
     return timer;
+}
+
+- (void)gcd_invalid:(dispatch_source_t)timer
+{
+    if (timer != NULL) {
+        dispatch_source_cancel(timer);
+    }
+    [self setTitle:@"获取验证码" forState:UIControlStateNormal];
+    self.enabled = YES;
 }
 
 @end

@@ -18,8 +18,6 @@ typedef void (^TakePhotoCompleteBlock) (NSArray<UIImage *> *images);
 
 @interface BaseViewCtrl (Photo)
 
-@property (nonatomic, copy, readonly) TakePhotoCompleteBlock takePhotoCompleteBlock;
-
 /**
  *  取照片
  *

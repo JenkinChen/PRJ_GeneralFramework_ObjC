@@ -8,6 +8,7 @@
 
 #import "BaseViewCtrl+Location.h"
 #import <objc/runtime.h>
+#import "BaseViewCtrl+Category.h"
 
 @interface BaseViewCtrl ()
 
@@ -45,12 +46,7 @@
         
     }
     else {
-        UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:nil
-                                                            message:@"定位服务当前可能尚未打开，请设置打开"
-                                                           delegate:nil
-                                                  cancelButtonTitle:@"确定"
-                                                  otherButtonTitles:nil];
-        [alertView show];
+        [self presentAlertViewControllerWithTitle:nil message:@"定位服务当前可能尚未打开，请设置打开" sureTitle:@"确定"];
     }
 }
 

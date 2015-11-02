@@ -8,6 +8,7 @@
 
 #import "OneViewCtrl.h"
 #import "BaseViewCtrl+Photo.h"
+#import "BaseViewCtrl+Category.h"
 
 @interface OneViewCtrl ()
 {

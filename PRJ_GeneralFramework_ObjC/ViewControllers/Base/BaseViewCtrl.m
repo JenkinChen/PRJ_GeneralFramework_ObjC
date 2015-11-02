@@ -8,6 +8,7 @@
 
 #import "BaseViewCtrl.h"
 #import "HttpRequest.h"
+#import "BaseViewCtrl+Category.h"
 
 @interface BaseViewCtrl () <HttpRequestDelegate>
 
