@@ -16,24 +16,25 @@
 		02256D221BD67B3500C473B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02256D201BD67B3500C473B7 /* LaunchScreen.storyboard */; };
 		02256D2D1BD67B3500C473B7 /* PRJ_GeneralFramework_ObjCTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02256D2C1BD67B3500C473B7 /* PRJ_GeneralFramework_ObjCTests.m */; };
 		02256D381BD67B3500C473B7 /* PRJ_GeneralFramework_ObjCUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 02256D371BD67B3500C473B7 /* PRJ_GeneralFramework_ObjCUITests.m */; };
-		02256D5F1BD67D3000C473B7 /* BaseViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 02256D5E1BD67D3000C473B7 /* BaseViewCtrl.m */; settings = {ASSET_TAGS = (); }; };
-		02D31BD11BE5EA8D00620D2A /* BaseViewCtrl+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D31BD01BE5EA8D00620D2A /* BaseViewCtrl+Category.m */; settings = {ASSET_TAGS = (); }; };
+		02256D5F1BD67D3000C473B7 /* BaseViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = 02256D5E1BD67D3000C473B7 /* BaseViewCtrl.m */; };
+		02D31BD11BE5EA8D00620D2A /* BaseViewCtrl+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = 02D31BD01BE5EA8D00620D2A /* BaseViewCtrl+Category.m */; };
 		64C7930C60E887C190484466 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A1537C9FEA3926E1FE6C649 /* libPods.a */; };
-		DD043D541BE05A1100796312 /* OneNextViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = DD043D511BE05A1100796312 /* OneNextViewCtrl.m */; settings = {ASSET_TAGS = (); }; };
-		DD043D551BE05A1100796312 /* OneViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = DD043D531BE05A1100796312 /* OneViewCtrl.m */; settings = {ASSET_TAGS = (); }; };
+		DD043D541BE05A1100796312 /* OneNextViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = DD043D511BE05A1100796312 /* OneNextViewCtrl.m */; };
+		DD043D551BE05A1100796312 /* OneViewCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = DD043D531BE05A1100796312 /* OneViewCtrl.m */; };
 		DD06AA951BD907A400EF14F1 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DD06AA941BD907A400EF14F1 /* CoreFoundation.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
-		DD06AAC21BD90A6C00EF14F1 /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DD06AABB1BD90A6C00EF14F1 /* UIViewController+Category.m */; settings = {ASSET_TAGS = (); }; };
-		DD06AAC31BD90A6C00EF14F1 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DD06AABD1BD90A6C00EF14F1 /* NSString+Category.m */; settings = {ASSET_TAGS = (); }; };
-		DD06AAC41BD90A6C00EF14F1 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DD06AABF1BD90A6C00EF14F1 /* UIButton+Category.m */; settings = {ASSET_TAGS = (); }; };
-		DD06AAC51BD90A6C00EF14F1 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DD06AAC11BD90A6C00EF14F1 /* UIImage+Category.m */; settings = {ASSET_TAGS = (); }; };
-		DD06AAC71BD911E800EF14F1 /* IOS编码规范.doc in Resources */ = {isa = PBXBuildFile; fileRef = DD06AAC61BD911E800EF14F1 /* IOS编码规范.doc */; settings = {ASSET_TAGS = (); }; };
-		DD2881711BD8FE4E009FCC28 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD2881701BD8FE4E009FCC28 /* Media.xcassets */; settings = {ASSET_TAGS = (); }; };
-		DD2881741BD8FED9009FCC28 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2881731BD8FED9009FCC28 /* HttpRequest.m */; settings = {ASSET_TAGS = (); }; };
-		DD28817A1BD8FF6D009FCC28 /* BaseViewCtrl+Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2881771BD8FF6D009FCC28 /* BaseViewCtrl+Photo.m */; settings = {ASSET_TAGS = (); }; };
-		DD28817B1BD8FF6D009FCC28 /* BaseViewCtrl+Location.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2881791BD8FF6D009FCC28 /* BaseViewCtrl+Location.m */; settings = {ASSET_TAGS = (); }; };
-		DD28817F1BD90092009FCC28 /* MainTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD28817C1BD90092009FCC28 /* MainTabBarView.xib */; settings = {ASSET_TAGS = (); }; };
-		DD2881801BD90092009FCC28 /* MainTabBarCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = DD28817E1BD90092009FCC28 /* MainTabBarCtrl.m */; settings = {ASSET_TAGS = (); }; };
-		DD2881831BD900A9009FCC28 /* CustomNavCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2881821BD900A9009FCC28 /* CustomNavCtrl.m */; settings = {ASSET_TAGS = (); }; };
+		DD06AAC21BD90A6C00EF14F1 /* UIViewController+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DD06AABB1BD90A6C00EF14F1 /* UIViewController+Category.m */; };
+		DD06AAC31BD90A6C00EF14F1 /* NSString+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DD06AABD1BD90A6C00EF14F1 /* NSString+Category.m */; };
+		DD06AAC41BD90A6C00EF14F1 /* UIButton+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DD06AABF1BD90A6C00EF14F1 /* UIButton+Category.m */; };
+		DD06AAC51BD90A6C00EF14F1 /* UIImage+Category.m in Sources */ = {isa = PBXBuildFile; fileRef = DD06AAC11BD90A6C00EF14F1 /* UIImage+Category.m */; };
+		DD06AAC71BD911E800EF14F1 /* IOS编码规范.doc in Resources */ = {isa = PBXBuildFile; fileRef = DD06AAC61BD911E800EF14F1 /* IOS编码规范.doc */; };
+		DD2881711BD8FE4E009FCC28 /* Media.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD2881701BD8FE4E009FCC28 /* Media.xcassets */; };
+		DD2881741BD8FED9009FCC28 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2881731BD8FED9009FCC28 /* HttpRequest.m */; };
+		DD28817A1BD8FF6D009FCC28 /* BaseViewCtrl+Photo.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2881771BD8FF6D009FCC28 /* BaseViewCtrl+Photo.m */; };
+		DD28817B1BD8FF6D009FCC28 /* BaseViewCtrl+Location.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2881791BD8FF6D009FCC28 /* BaseViewCtrl+Location.m */; };
+		DD28817F1BD90092009FCC28 /* MainTabBarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DD28817C1BD90092009FCC28 /* MainTabBarView.xib */; };
+		DD2881801BD90092009FCC28 /* MainTabBarCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = DD28817E1BD90092009FCC28 /* MainTabBarCtrl.m */; };
+		DD2881831BD900A9009FCC28 /* CustomNavCtrl.m in Sources */ = {isa = PBXBuildFile; fileRef = DD2881821BD900A9009FCC28 /* CustomNavCtrl.m */; };
+		DDB4BCB21C1E76A500AC5728 /* YZBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DDB4BCB11C1E76A500AC5728 /* YZBaseTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -105,6 +106,8 @@
 		DD28817E1BD90092009FCC28 /* MainTabBarCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainTabBarCtrl.m; sourceTree = "<group>"; };
 		DD2881811BD900A9009FCC28 /* CustomNavCtrl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomNavCtrl.h; sourceTree = "<group>"; };
 		DD2881821BD900A9009FCC28 /* CustomNavCtrl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomNavCtrl.m; sourceTree = "<group>"; };
+		DDB4BCB01C1E76A500AC5728 /* YZBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YZBaseTableViewCell.h; sourceTree = "<group>"; };
+		DDB4BCB11C1E76A500AC5728 /* YZBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YZBaseTableViewCell.m; sourceTree = "<group>"; };
 		E01C531EEAAFA5D29551B4CF /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		FE9A1509C7566850631469DF /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -261,8 +264,8 @@
 		02256D561BD67C4100C473B7 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				02256D571BD67C4100C473B7 /* CollectionView */,
 				02256D581BD67C4100C473B7 /* Other */,
+				02256D571BD67C4100C473B7 /* CollectionView */,
 				02256D591BD67C4100C473B7 /* TableView */,
 			);
 			path = Views;
@@ -285,6 +288,8 @@
 		02256D591BD67C4100C473B7 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
+				DDB4BCB01C1E76A500AC5728 /* YZBaseTableViewCell.h */,
+				DDB4BCB11C1E76A500AC5728 /* YZBaseTableViewCell.m */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -351,6 +356,7 @@
 				02256D091BD67B3500C473B7 /* Frameworks */,
 				02256D0A1BD67B3500C473B7 /* Resources */,
 				FACD25076BC3050AECD11BD5 /* Copy Pods Resources */,
+				74BDF06D14FD4FD8E889E31B /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -485,6 +491,21 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
+		74BDF06D14FD4FD8E889E31B /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FACD25076BC3050AECD11BD5 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -508,6 +529,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD06AAC21BD90A6C00EF14F1 /* UIViewController+Category.m in Sources */,
+				DDB4BCB21C1E76A500AC5728 /* YZBaseTableViewCell.m in Sources */,
 				DD06AAC41BD90A6C00EF14F1 /* UIButton+Category.m in Sources */,
 				DD06AAC51BD90A6C00EF14F1 /* UIImage+Category.m in Sources */,
 				02D31BD11BE5EA8D00620D2A /* BaseViewCtrl+Category.m in Sources */,
@@ -614,7 +636,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -651,7 +673,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -666,6 +688,37 @@
 				INFOPLIST_FILE = PRJ_GeneralFramework_ObjC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"BlocksKit\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"QBImagePickerController\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-w",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.C.-PRJ-GeneralFramework-ObjC.PRJ-GeneralFramework-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -679,6 +732,37 @@
 				INFOPLIST_FILE = PRJ_GeneralFramework_ObjC/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-l\"AFNetworking\"",
+					"-l\"BlocksKit\"",
+					"-l\"IQKeyboardManager\"",
+					"-l\"MBProgressHUD\"",
+					"-l\"MJRefresh\"",
+					"-l\"Masonry\"",
+					"-l\"QBImagePickerController\"",
+					"-l\"SDWebImage\"",
+					"-framework",
+					"\"AssetsLibrary\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"ImageIO\"",
+					"-framework",
+					"\"MessageUI\"",
+					"-framework",
+					"\"MobileCoreServices\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-w",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.C.-PRJ-GeneralFramework-ObjC.PRJ-GeneralFramework-ObjC";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

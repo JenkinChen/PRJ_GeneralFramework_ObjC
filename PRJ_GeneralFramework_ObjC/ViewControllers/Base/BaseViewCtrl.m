@@ -25,30 +25,14 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self Initialization];
-    [self initView];
-    [self initData];
-    [self loadData];
+//    self.automaticallyAdjustsScrollViewInsets = NO;
+    
+    self.navigationController.interactivePopGestureRecognizer.delegate = (id)self;
+    
+    [self initialization];
 }
 
-- (void)Initialization
-{
-    self.automaticallyAdjustsScrollViewInsets = NO;
-    
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:UIImageName(@"公用-导航栏-返回-白色") style:UIBarButtonItemStylePlain target:self action:@selector(popBack)];
-    
-    
-    UITapGestureRecognizer *endEditTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(endEdit)];
-    endEditTap.delegate = self;
-    [self.view addGestureRecognizer:endEditTap];
-}
-
-- (void)initView
-{
-    
-}
-
-- (void)initData
+- (void)initialization
 {
     
 }
@@ -56,16 +40,16 @@
 - (void)loadDataNew
 {
     _pageIndex = 0;
-    [self loadData];
+    [self requestData];
 }
 
 - (void)loadDataMore
 {
     _pageIndex++;
-    [self loadData];
+    [self requestData];
 }
 
-- (void)loadData
+- (void)requestData
 {
     
 }
@@ -94,16 +78,6 @@
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:RJCellIdentifier forIndexPath:indexPath];
     
     return cell;
-}
-
-#pragma mark - UIGestureRecognizerDelegate
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldReceiveTouch:(UITouch *)touch
-{
-    NSLog(@"%@", [touch.view class]);
-    if ([NSStringFromClass([touch.view class]) isEqualToString:@"UITableViewCellContentView"] ) {
-        return NO;
-    }
-    return YES;
 }
 
 #pragma mark - NetWork
@@ -150,9 +124,19 @@
 }
 
 #pragma mark - Public
+- (void)popRoot
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
+}
+
 - (void)popBack
 {
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)popToViewController:(nonnull UIViewController *)viewController;
+{
+    [self.navigationController popToViewController:viewController animated:YES];
 }
 
 - (void)endEdit
@@ -181,8 +165,8 @@
 - (void)endRefreshingWith:(id)control
 {
     if ([control isKindOfClass:[UITableView class]] || [control isKindOfClass:[UICollectionView class]]) {
-        [[control header] endRefreshing];
-        [[control footer] endRefreshing];
+        [[control mj_header] endRefreshing];
+        [[control mj_footer] endRefreshing];
     }
 }
 
@@ -201,7 +185,7 @@
     [self showMBProgressHUDWith:MBProgressHUDModeIndeterminate];
 }
 
-- (void)showMBProgressHUDCorrect:(NSString *)message completionBlock:(void(^)(void))completionBlock;
+- (void)showMBProgressHUDCorrect:(nullable NSString *)message completionBlock:(nullable void(^)(void))completionBlock;
 {
     [self showMBProgressHUDWith:MBProgressHUDModeCustomView];
     _progressHUD.customView = [[UIImageView alloc] initWithImage:UIImageName(@"公共-成功-图标")];
@@ -218,7 +202,7 @@
     }];
 }
 
-- (void)showMBProgressHUDError:(NSString *)message;
+- (void)showMBProgressHUDError:(nullable NSString *)message;
 {
     [self showMBProgressHUDWith:MBProgressHUDModeCustomView];
     _progressHUD.customView = [[UIImageView alloc] initWithImage:UIImageName(@"公共-失败-图标")];
@@ -227,7 +211,7 @@
     [self hideMBProgressHUDAfterDelay:1];
 }
 
-- (void)showMBProgressHUDText:(NSString *)message
+- (void)showMBProgressHUDText:(nullable NSString *)message
 {
     [self showMBProgressHUDWith:MBProgressHUDModeText];
     _progressHUD.detailsLabelText = message;

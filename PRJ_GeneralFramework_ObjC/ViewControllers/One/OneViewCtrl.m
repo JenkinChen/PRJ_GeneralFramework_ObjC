@@ -25,21 +25,17 @@
     
 }
 
-- (void)initView
+- (void)initialization
 {
-    self.navigationItem.leftBarButtonItem = nil;
-    if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
-        self.navigationController.interactivePopGestureRecognizer.enabled = NO;
-    }
-    
-    
     _tableView.tableFooterView = [[UIView alloc] init];
-    _tableView.header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadDataNew)];
-    _tableView.footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadDataMore)];
+    _tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingTarget:self refreshingAction:@selector(loadDataNew)];
+    _tableView.mj_footer = [MJRefreshAutoFooter footerWithRefreshingTarget:self refreshingAction:@selector(loadDataMore)];
     [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:RJCellIdentifier];
+    
+    [self requestData];
 }
 
-- (void)loadData
+- (void)requestData
 {
     if (_pageIndex == 0) {
         [self.dataSource removeAllObjects];

@@ -12,13 +12,13 @@
 #import <MJRefresh/MJRefresh.h>
 #import "BaseViewCtrlNetworkDelegate.h"
 
-static NSString *const RJCellIdentifier = @"CellIdentifier";        /**< Cell复用标识符 */
+static NSString * _Nonnull const RJCellIdentifier = @"CellIdentifier";        /**< Cell复用标识符 */
 
-static NSString *const RJHeaderIdentifier = @"HeaderIdentifier";     /**< 头部复用标识符 */
+static NSString * _Nonnull const RJHeaderIdentifier = @"HeaderIdentifier";     /**< 头部复用标识符 */
 
-static NSString *const RJFooterIdentifier = @"FooterIdentifier";    /**< 尾部复用标识符 */
+static NSString * _Nonnull const RJFooterIdentifier = @"FooterIdentifier";    /**< 尾部复用标识符 */
 
-@interface BaseViewCtrl : UIViewController <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, UIGestureRecognizerDelegate, BaseViewCtrlNetworkDelegate>
+@interface BaseViewCtrl : UIViewController <UITableViewDataSource, UITableViewDelegate, UICollectionViewDataSource, UICollectionViewDelegate, BaseViewCtrlNetworkDelegate>
 {
     NSInteger _pageIndex;
     
@@ -26,21 +26,16 @@ static NSString *const RJFooterIdentifier = @"FooterIdentifier";    /**< 尾部�
     MBProgressHUD *_progressHUD;
 }
 
-@property (nonatomic, copy) void (^refreshBlock) (void);    /**< 回调刷新 */
+@property (nonatomic, copy, nullable) void (^refreshBlock) (void);    /**< 回调刷新 */
 
-@property (nonatomic, copy) NSMutableArray *dataSource;
+@property (nonatomic, strong, nullable) NSMutableArray *dataSource;
 
-@property (nonatomic, copy) NSString *detailId;             /**< 详情ID */
-
-/**
- *  初始化控件
- */
-- (void)initView;
+@property (nonatomic, copy, nullable) NSString *detailId;             /**< 详情ID */
 
 /**
  *  初始化数据
  */
-- (void)initData;
+- (void)initialization;
 
 /*************************为上拉下拉控件使用，可以不实现************************/
 /**
@@ -58,7 +53,7 @@ static NSString *const RJFooterIdentifier = @"FooterIdentifier";    /**< 尾部�
 /**
  *  请求数据
  */
-- (void)loadData;
+- (void)requestData;
 /***************************************************************************/
 
 /**
@@ -71,11 +66,16 @@ static NSString *const RJFooterIdentifier = @"FooterIdentifier";    /**< 尾部�
  *
  *  @param control UITableView或UICollectionView
  */
-- (void)endRefreshingWith:(id)control;
+- (void)endRefreshingWith:(nullable id)control;
 
-- (void)POST:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode object:(id)object;
+- (void)POST:(nullable NSString *)URLString parameters:(nullable id)parameters requestCode:(NSInteger)requestCode object:(nullable id)object;
 
-- (void)POST:(NSString *)URLString parameters:(id)parameters requestCode:(NSInteger)requestCode;
+- (void)POST:(nullable NSString *)URLString parameters:(nullable id)parameters requestCode:(NSInteger)requestCode;
+
+/**
+ *  导航栏返回根控制器
+ */
+- (void)popRoot;
 
 /**
  *  导航栏返回
@@ -83,16 +83,22 @@ static NSString *const RJFooterIdentifier = @"FooterIdentifier";    /**< 尾部�
 - (void)popBack;
 
 /**
+ *  返回到viewController
+ *
+ *  @param viewController 指定viewController
+ */
+- (void)popToViewController:(nonnull UIViewController *)viewController;
+
+/**
  *  结束编辑
  */
 - (void)endEdit;
 
+- (void)showMBProgressHUDCorrect:(nullable NSString *)message completionBlock:(nullable void(^)(void))completionBlock;
 
-- (void)showMBProgressHUDCorrect:(NSString *)message completionBlock:(void(^)(void))completionBlock;
+- (void)showMBProgressHUDError:(nullable NSString *)message;
 
-- (void)showMBProgressHUDError:(NSString *)message;
-
-- (void)showMBProgressHUDText:(NSString *)message;
+- (void)showMBProgressHUDText:(nullable NSString *)message;
 
 - (void)hideMBProgressHUD;
 

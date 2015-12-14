@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B22c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cLM-6M-yZH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="cLM-6M-yZH">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--one-->
@@ -19,7 +20,6 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="aj9-m3-IyF">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="WGu-2w-Lhd" id="ZC2-Lv-GiO"/>
@@ -27,13 +27,12 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="aj9-m3-IyF" secondAttribute="bottom" id="SLw-Lx-JNt"/>
+                            <constraint firstItem="aj9-m3-IyF" firstAttribute="top" secondItem="6kp-kM-jyR" secondAttribute="topMargin" id="dDH-ZM-H7q"/>
                             <constraint firstAttribute="trailing" secondItem="aj9-m3-IyF" secondAttribute="trailing" id="fSK-N7-WQH"/>
                             <constraint firstItem="aj9-m3-IyF" firstAttribute="leading" secondItem="6kp-kM-jyR" secondAttribute="leading" id="izr-dS-BJf"/>
-                            <constraint firstItem="aj9-m3-IyF" firstAttribute="top" secondItem="O8i-Nm-SVb" secondAttribute="bottom" id="lvV-bH-8iS"/>
                         </constraints>
                         <variation key="default">
                             <mask key="subviews">
@@ -41,9 +40,9 @@
                             </mask>
                             <mask key="constraints">
                                 <exclude reference="SLw-Lx-JNt"/>
+                                <exclude reference="dDH-ZM-H7q"/>
                                 <exclude reference="fSK-N7-WQH"/>
                                 <exclude reference="izr-dS-BJf"/>
-                                <exclude reference="lvV-bH-8iS"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
@@ -52,9 +51,9 @@
                             </mask>
                             <mask key="constraints">
                                 <include reference="SLw-Lx-JNt"/>
+                                <include reference="dDH-ZM-H7q"/>
                                 <include reference="fSK-N7-WQH"/>
                                 <include reference="izr-dS-BJf"/>
-                                <include reference="lvV-bH-8iS"/>
                             </mask>
                         </variation>
                     </view>
@@ -81,7 +80,6 @@
                     <view key="view" contentMode="scaleToFill" id="hcP-6D-Rrk">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
@@ -97,7 +95,6 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="mFZ-RR-g1d">
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
@@ -120,7 +117,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="G6p-O3-t4T">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -142,7 +138,6 @@
                     <view key="view" contentMode="scaleToFill" id="lfp-qU-T0u">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="two" id="1ax-Gc-5cF"/>
@@ -160,7 +155,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nyx-86-8ro">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -182,7 +176,6 @@
                     <view key="view" contentMode="scaleToFill" id="xME-U1-9Ev">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="three" id="xPb-VO-3aI"/>
@@ -200,7 +193,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="2cM-rP-hRt">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -222,7 +214,6 @@
                     <view key="view" contentMode="scaleToFill" id="pvn-Ua-rvm">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="four" id="rZv-jw-bf4"/>
@@ -240,7 +231,6 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xET-Ch-fjA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

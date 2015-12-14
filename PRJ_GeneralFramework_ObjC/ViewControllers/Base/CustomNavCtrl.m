@@ -30,7 +30,13 @@
 - (void)pushViewController:(UIViewController *)viewController animated:(BOOL)animated
 {
     viewController.hidesBottomBarWhenPushed = YES;
+    viewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:UIImageName(@"公用-导航栏-返回-白色") style:UIBarButtonItemStylePlain target:self action:@selector(popBack)];
     [super pushViewController:viewController animated:animated];
+}
+
+- (void)popBack
+{
+    [super popViewControllerAnimated:YES];
 }
 
 /*
