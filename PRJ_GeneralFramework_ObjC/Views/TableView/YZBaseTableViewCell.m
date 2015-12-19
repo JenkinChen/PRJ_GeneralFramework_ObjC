@@ -20,11 +20,13 @@
     // Configure the view for the selected state
 }
 
-//+ (instancetype)initWithTable:(UITableView *)tableView withModle:(id)model
-//{
-//    self = [[[self class] alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@""];
-//    
-//    return self;
-//}
+- (instancetype)initWithTable:(UITableView *)tableView withModle:(id)model
+{
+//    NSString *s = NSStringFromClass([self class]);
+//    static NSString *reuseIdentifier = s;
+    self = [[[self class] alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@""];
+    
+    return self;
+}
 
 @end
