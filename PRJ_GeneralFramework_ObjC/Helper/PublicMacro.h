@@ -41,9 +41,10 @@
 
 #define UIFontSize(CGFloat) [UIFont systemFontOfSize:CGFloat]
 
-#define UIColorRGBA(rCGFloat, gCGFloat, bCGFloat, aCGFloat) [UIColor colorWithRed:(rCGFloat) green:(gCGFloat) blue:(bCGFloat) alpha:(aCGFloat)]
+#define UIColorRGBA(rNSUInteger, gNSUInteger, bNSUInteger, aCGFloat) \
+[UIColor colorWithRed:(rNSUInteger)/255.0 green:(gNSUInteger)/255.0 blue:(bNSUInteger)/255.0 alpha:(aCGFloat)]
 
-#define UIColorBase UIColorRGBA(0/255.0 green:171/255.0 blue:236/255.0 alpha:1.0f)
+#define UIColorBase UIColorRGBA(0, 171, 236, 1.0f)
 
 #define UIColorWhite [UIColor whiteColor]
 

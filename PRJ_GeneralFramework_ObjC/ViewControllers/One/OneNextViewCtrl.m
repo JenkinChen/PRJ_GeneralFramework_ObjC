@@ -18,9 +18,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    [self requestData];
 }
 
-- (void)loadData
+- (void)requestData
 {
     [self POST:@"&c=Index&a=goods_type" parameters:nil requestCode:123];
     [self POST:@"&c=Index&a=goods_type" parameters:nil requestCode:456];
@@ -34,11 +35,6 @@
 - (void)httpRequestSuccess:(NSInteger)requestCode result:(id)responseObject
 {
     NSLog(@"=========%ld", requestCode);
-}
-
-- (void)requestData
-{
-//    [HttpRequest POST:@"&c=Index&a=goods_type" parameters:nil requestCode:123 delegate:self object:nil];
 }
 
 - (void)didReceiveMemoryWarning {

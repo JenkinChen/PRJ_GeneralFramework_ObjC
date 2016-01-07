@@ -49,17 +49,17 @@
     [self requestData];
 }
 
+- (void)requestData
+{
+    
+}
+
 - (void)viewWillDisappear:(BOOL)animated {
     [super viewWillDisappear:animated];
     //代理置空，否则会闪退
     if ([self.navigationController respondsToSelector:@selector(interactivePopGestureRecognizer)]) {
         self.navigationController.interactivePopGestureRecognizer.delegate = nil;
     }
-}
-
-- (void)requestData
-{
-    
 }
 
 #pragma mark - UITableViewDataSource

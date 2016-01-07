@@ -101,11 +101,12 @@
 #pragma mark - QBImagePickerControllerDelegate
 - (void)qb_imagePickerController:(QBImagePickerController *)imagePickerController didSelectAssets:(NSArray *)assets
 {
+#warning 图片兼容
     NSMutableArray *imageArray = [NSMutableArray array];
-    for (ALAsset *asset in assets) {
-        UIImage *image = [UIImage imageWithCGImage:asset.defaultRepresentation.fullScreenImage];
-        [imageArray addObject:image];
-    }
+//    for (ALAsset *asset in assets) {
+//        UIImage *image = [UIImage imageWithCGImage:asset.defaultRepresentation.fullScreenImage];
+//        [imageArray addObject:image];
+//    }
     if (self.takePhotoCompleteBlock) {
         self.takePhotoCompleteBlock(imageArray);
     }

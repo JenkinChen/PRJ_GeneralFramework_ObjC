@@ -20,7 +20,7 @@
     id<HttpRequestDelegate> _viewController;
     id _object;
     
-    AFHTTPRequestOperationManager *_manager;
+    AFHTTPSessionManager *_manager;
 }
 @end
 
@@ -30,7 +30,7 @@
 {
     self = [super init];
     if (self) {
-        _manager = [AFHTTPRequestOperationManager manager];
+        _manager = [AFHTTPSessionManager manager];
         _manager.requestSerializer.timeoutInterval = 30.f;
         _manager.requestSerializer = [AFHTTPRequestSerializer serializer];
         _manager.responseSerializer = [AFHTTPResponseSerializer serializer];
@@ -60,6 +60,36 @@
 
 - (void)POST
 {
+    [_manager POST:_URLString parameters:_parameters progress:^(NSProgress * _Nonnull uploadProgress) {
+        
+    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        responseObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
+        
+        if (PrintLog) {
+            NSLog(@"\nSuccessResult:%@", responseObject);
+        }
+        
+        if (_object == nil) {
+            if ([_viewController respondsToSelector:@selector(httpRequestSuccess:result:)]) {
+                [_viewController httpRequestSuccess:_requestCode result:responseObject];
+            }
+        }
+        else {
+            if ([_viewController respondsToSelector:@selector(httpRequestSuccess:result:object:)]) {
+                [_viewController httpRequestSuccess:_requestCode result:responseObject object:_object];
+            }
+        }
+    } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
+        if (PrintLog) {
+            NSLog(@"\nErrorResult%@", error);
+        }
+        
+        if ([_viewController respondsToSelector:@selector(httpRequestFailure:error:)]) {
+            [_viewController httpRequestFailure:_requestCode error:error];
+        }
+    }];
+    
+    /*
     [_manager POST:_URLString parameters:_parameters success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
          responseObject = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers error:nil];
@@ -90,6 +120,7 @@
             [_viewController httpRequestFailure:_requestCode error:error];
         }
     }];
+     */
 }
 
 /*
